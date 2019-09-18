@@ -1,0 +1,52 @@
+.img-menu{
+  width: 200px;
+  height: 150px;
+  border-radius: 5px;
+}
+
+.meal-head{
+    font-weight: 400;
+    
+}
+
+.meal-price{
+    font-weight: 600;
+}
+
+.meal-tags {
+	list-style: none;
+	
+	padding-bottom: 10px;
+    width: 100%;
+    
+}
+
+
+
+.meal-tags li {
+    
+	margin: 40px 14px 10px;
+	display: inline-block;
+    text-align: justify;
+    
+}
+.meal-tags li a:hover {
+    
+    background-color: rgb(173, 207, 235);
+    outline: none;
+    text-decoration: none;
+}
+
+.meal-tags li a {
+    
+	color: #111111;
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	background: #ebebeb;
+	display: block;
+	width: 100%;
+	padding: 10px 34px;
+	border-radius: 31px;
+}
+

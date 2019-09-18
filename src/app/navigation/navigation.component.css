@@ -1,0 +1,9 @@
+#heading{
+    letter-spacing: 5px;
+    font-size: 25px;
+}
+
+.navbar-nav > li{
+    padding-left:30px;
+    padding-right:30px;
+}

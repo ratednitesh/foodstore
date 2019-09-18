@@ -1,0 +1,6 @@
+#construct-message{
+    left:20%;
+    top: 50%;
+    transform: translate(-20%,-50%);
+    position: absolute;
+}

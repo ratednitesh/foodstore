@@ -1,0 +1,29 @@
+<div class="container" style="height: 100vh;margin-top: 10vh;">
+  <ul class="ala-tags">
+    <li><a href="">Thali's</a></li>
+    <li><a href="">Bengali</a></li>
+    <li><a href="">South Indian</a></li>
+    <li><a href="">North Indian</a></li>
+    <li><a href="">Hyderabadi</a></li>
+    <li><a href="">Non Veg</a></li>
+  </ul>
+  <div class="row">
+    <div *ngFor="let item of foodItems"  class="col-3 text-justify mb-5 ">
+
+      <img class="img-ala text-center pl-3" [src]="item.itemPhoto" alt="">
+      <h3 class="ala-head pl-3 mt-2">{{item.itemName}}</h3>
+      <p style="margin-bottom:0">{{item.itemDesc}}
+      </p>
+      <div>
+          <span  *ngFor="let tag of item.cusineType" class="btn btn-outline-info mx-2 my-1"> {{tag}} </span>
+      </div>
+      <p class=" ala-price pl-3 " style="display:inline;">Rs. {{item.sellingPrice}}/-
+          <span *ngIf="item.discountType=='percentage'" style="font-size:90%;color: tomato; text-align: left;">{{item.discountValue}}% off</span>
+          <span *ngIf="item.discountType=='fixed'" style="font-size:90%;color: tomato; text-align: left;">Rs.{{item.discountValue}}/- off</span>
+      </p>
+      <button class=" btn btn-primary ml-5 ">Add to Cart</button>
+
+    </div>
+ 
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" routerLink="/home"><i class="fa fa-cutlery px-3" aria-hidden="true"
+      style="font-size: 30px"></i><span id="heading">{{heading}}</span></a>
+
+  <button class="navbar-toggler d-lg-none" type="button" (click)="isCollapsed = !isCollapsed"
+    [attr.aria-expanded]="!isCollapsed" aria-controls="navbar" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbar" [ngbCollapse]="isCollapsed">
+    <ul class="navbar-nav mr-auto">
+      <!-- <li class="nav-item active">
+        <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+      </li> -->
+      <li class="nav-item active">
+        <div ngbDropdown class="d-inline-block">
+          <button class="btn btn-outline-light" id="dropdownBasic1" ngbDropdownToggle>Place Order</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem routerLink="/meals"> Meals</button>
+            <button ngbDropdownItem routerLink="/alaCarte">à la carte</button>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="/construct" > Objective</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/construct">Key Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/construct">Chef Stories</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/construct">Contact Us</a>
+      </li>
+    </ul>
+    <a routerLink="/cart"> <i class="fa fa-cart-plus text-white px-2" aria-hidden="true"
+        style="font-size: 30px"></i></a>
+    <!-- <a href=""> <i class="fa fa-user  text-white px-2" aria-hidden="true" style="font-size: 27px"></i></a> -->
+    <div ngbDropdown class="d-inline-block">
+      <a class="text-white" id="dropdownBasic2" ngbDropdownToggle style="cursor:pointer"><i class="fa fa-user  text-white px-2" aria-hidden="true" style="font-size: 27px"></i></a>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+        <button ngbDropdownItem routerLink="/construct">Offers</button>
+        <button ngbDropdownItem routerLink="/construct">Orders</button>
+        <button ngbDropdownItem routerLink="/admin">Admin Login</button>
+        <button ngbDropdownItem routerLink="/construct"> Personal Info</button>
+      </div>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

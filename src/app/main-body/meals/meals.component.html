@@ -1,0 +1,36 @@
+<div class="container" style="height: 100vh;margin-top: 10vh;">
+  <ul class="meal-tags">
+    <li><a href="">Thali's</a></li>
+    <li><a href="">Bengali</a></li>
+    <li><a href="">South Indian</a></li>
+    <li><a href="">North Indian</a></li>
+    <li><a href="">Hyderabadi</a></li>
+    <li><a href="">Non Veg</a></li>
+
+
+  </ul>
+
+  <div *ngFor="let item of foodItems">
+    <div class="row my-5">
+      <div class=" col-sm-3 "><img class="img-menu" [src]=item.itemPhoto alt=""></div>
+      <div class="col-sm-9">
+        <h3 class="meal-head" style="margin:0">{{item.itemName}}</h3>
+        <p>{{item.itemDesc}}
+        </p>
+        <div>
+          <span *ngFor="let tag of item.cusineType" class="btn btn-outline-info mx-2"> {{tag}} </span>
+        </div>
+        <p class="meal-price">Rs. {{item.sellingPrice}}/-
+        </p>
+        <div>
+          <p *ngIf="item.discountType=='percentage'" style="font-size:90%;color: tomato;">{{item.discountValue}}% off
+          </p>
+          <p *ngIf="item.discountType=='fixed'" style="font-size:90%;color: tomato;">Rs. {{item.discountValue}}/- off
+          </p>
+        </div>
+
+        <button class="btn btn-primary col-2" (click)="methodTemp()">Add to Cart</button>
+
+      </div>
+    </div>
+  </div>

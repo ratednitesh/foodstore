@@ -1,0 +1,8 @@
+.table>tbody>tr>td, .table>tfoot>tr>td{
+    vertical-align: middle;
+}
+
+.img-cart{
+    width: 100px;
+    height: 100px;
+}
